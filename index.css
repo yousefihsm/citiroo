@@ -1,0 +1,174 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    position: relative;
+}
+
+.main-container {
+    position: relative;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+h1:first-of-type {
+    font-weight: var(--weight1);
+    color: var(--varyDarkBlue);
+}
+
+h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+
+.header-container {
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
+
+    top: 0;
+    position: sticky;
+    background-color: var(--veryLightGray);
+    padding: 20px;
+    box-shadow: 0 -1px 19px 0px #8080802b;
+}
+
+.header-container p {
+    margin: 0 auto;
+    line-height: 3;
+    color: var(--grayishBlue);
+}
+
+/* this element added in js script */
+
+.box span {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+}
+
+/* --------------------------------- */
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.red {
+    border-top: 3px solid var(--red);
+}
+
+.hl {
+    background-color: rgb(241, 228, 167);
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+@media (min-width: 950px) {
+    .card-container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 20%;
+    }
+
+    .header-container p {
+        width: 30%;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 62, 5%;
+}
+
+.search_label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    /* margin-left: 2rem;
+    margin-top: 0.7rem; */
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+    width: 30%;
+    margin: 10px auto 0 auto;
+    text-align: left;
+    color: var(--grayishBlue);
+}
+
+.search_input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    /* padding: 1.5rem 2rem; */
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    /* border: none; */
+    width: 30%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+
+    padding: 15px;
+    border: 1px solid var(--grayishBlue);
+}
+
+.search_input:placeholder-shown+.search_label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
